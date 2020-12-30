@@ -13,7 +13,7 @@ from torchtext.data import Field, TabularDataset, BucketIterator
 from tqdm import tqdm
 from sklearn.metrics import accuracy_score
 from config import DATA_PATH, MODEL_PATH
-from model import Net
+from models.lstm_model import Net
 
 
 SUMMARY_WRITER = SummaryWriter()
@@ -51,7 +51,7 @@ train_iter, val_iter, test_iter = BucketIterator.splits(
     device=torch.device(device),
 )
 
-net = Net(TEXT, fix_length=fix_length).to(device)
+net = Net(TEXT).to(device)
 optimizer = optim.Adam(net.parameters(), lr=lr)
 criterion = nn.CrossEntropyLoss()  # 损失函数
 
