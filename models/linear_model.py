@@ -2,7 +2,7 @@
 """
 @Time    : 2020/12/28 18:52
 @Author  : qijunhui
-@File    : model.py
+@File    : linear_model.py
 """
 import torch
 from torch import nn
