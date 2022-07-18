@@ -1,0 +1,6 @@
+tqdm
+dill
+jieba
+torch==1.8.1+cu101
+torchtext==0.9.1
+tensorboard==2.9.0
